@@ -4,7 +4,7 @@
     :grid="{ gutter: 16, sm: 1, md: 4 }"
   >
     <a-list-item slot="renderItem" slot-scope="post">
-      <a-card>
+      <a-card hoverable>
         <a slot="title" :href="`/blog/${post.slug}`">{{ post.title }}</a>
         <p>{{ post.description }}</p>
       </a-card>
@@ -16,6 +16,12 @@
 import catalog from '~/assets/catalog.js';
 
 export default {
+  head () {
+    return {
+      title: 'Blog',
+    };
+  },
+
   data () {
     return {
       catalog,

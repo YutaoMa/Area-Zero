@@ -25,7 +25,7 @@ export default {
   ** Global CSS
   */
   css: [
-    'ant-design-vue/dist/antd.css',
+    'ant-design-vue/dist/antd.less',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -69,6 +69,14 @@ export default {
   ** Build configuration
   */
   build: {
+    loaders: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: {
+          'primary-color': '@purple-6',
+        },
+      },
+    },
     /*
     ** You can extend webpack config here
     */

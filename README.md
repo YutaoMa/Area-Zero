@@ -2,11 +2,20 @@
 
 > Yet Another Personal Site
 
+## Deployed On
+
+[Netlify](https://ytma.me)
+
+## Deploy Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bdb173b6-d85f-493f-a447-6ebc75a357cb/deploy-status)](https://app.netlify.com/sites/area-zero/deploys)
+
 ## Built With
 
 - Vue.js
 - Nuxt.js
 - Ant Design Vue
+- Netlify
 
 ## Build Setup
 
