@@ -15,5 +15,7 @@ module.exports = {
   rules: {
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always'],
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/no-v-html': 'off',
   }
 }

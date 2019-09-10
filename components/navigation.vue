@@ -21,6 +21,16 @@ export default {
           path: '/',
           icon: 'home',
         },
+        {
+          name: 'Dev',
+          path: '/dev',
+          icon: 'branches',
+        },
+        {
+          name: 'Contact',
+          path: '/contact',
+          icon: 'mail',
+        },
       ],
     };
   },
