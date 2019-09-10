@@ -26,6 +26,7 @@ export default {
   */
   css: [
     'ant-design-vue/dist/antd.less',
+    'highlight.js/styles/github.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -64,6 +65,12 @@ export default {
         '^/.netlify/functions': '',
       },
     },
+  },
+  markdownit: {
+    injected: true,
+    use: [
+      'markdown-it-highlightjs',
+    ],
   },
   /*
   ** Build configuration

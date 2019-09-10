@@ -19,7 +19,7 @@
 
       <a-list-item>
         <input type="hidden" name="form-name" value="contact">
-        <a-button type="primary" html-type="submit">Send</a-button>
+        <a-button class="button" type="primary" html-type="submit">Send</a-button>
       </a-list-item>
     </a-list>
   </form>
@@ -38,5 +38,9 @@ export default {
 <style scoped>
 form {
   max-width: 512px;
+}
+
+.button {
+  margin: auto;
 }
 </style>
