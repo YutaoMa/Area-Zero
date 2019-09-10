@@ -1,3 +1,5 @@
+import catalog from './assets/catalog.js';
+
 export default {
   mode: 'universal',
   /*
@@ -72,5 +74,12 @@ export default {
     */
     extend (config, ctx) {
     },
+  },
+  /*
+  ** Generate configuration
+  */
+  generate: {
+    routes: []
+      .concat(catalog.map(post => `/blog/${post.slug}`)),
   },
 };

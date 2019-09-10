@@ -27,6 +27,11 @@ export default {
           icon: 'branches',
         },
         {
+          name: 'Blog',
+          path: '/blog',
+          icon: 'book',
+        },
+        {
           name: 'Contact',
           path: '/contact',
           icon: 'mail',
