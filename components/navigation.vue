@@ -32,6 +32,11 @@ export default {
           icon: 'book',
         },
         {
+          name: 'Social',
+          path: '/social',
+          icon: 'instagram',
+        },
+        {
           name: 'Contact',
           path: '/contact',
           icon: 'mail',

@@ -26,7 +26,7 @@ export default {
   */
   css: [
     'ant-design-vue/dist/antd.less',
-    'highlight.js/styles/github.css',
+    'highlight.js/styles/atom-one-dark.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -67,7 +67,6 @@ export default {
     },
   },
   markdownit: {
-    injected: true,
     use: [
       'markdown-it-highlightjs',
     ],
