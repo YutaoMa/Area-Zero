@@ -2,7 +2,7 @@
   <a-list
     :data-source="posts"
     :loading="loading"
-    :grid="{ gutter: 16, sm: 1, md: 4 }"
+    :grid="{ gutter: 16, sm: 1, md: 3 }"
   >
     <a-list-item slot="renderItem" slot-scope="post">
       <a-card>
@@ -15,12 +15,8 @@
             >
           </div>
         </a-carousel>
-        <a-card-meta :title="post.caption">
-          <div slot="description">
-            <a-tag v-for="(tag, index) in post.tags" :key="index">
-              {{ tag }}
-            </a-tag>
-          </div>
+        <a-card-meta>
+          <p slot="description">{{ post.caption }}</p>
         </a-card-meta>
       </a-card>
     </a-list-item>

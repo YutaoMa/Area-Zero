@@ -14,12 +14,11 @@ exports.handler = (event, context, callback) => {
             return image.images.standard_resolution;
           });
         } else {
-          images = post.images.standard_resolution;
+          images = [ post.images.standard_resolution, ];
         }
         return {
           images,
           caption: post.caption ? post.caption.text : '',
-          tags: post.tags,
         };
       });
     })
