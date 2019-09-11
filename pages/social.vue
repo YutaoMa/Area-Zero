@@ -5,22 +5,16 @@
     :grid="{ gutter: 16, sm: 1, md: 4 }"
   >
     <a-list-item slot="renderItem" slot-scope="post">
-      <a-carousel v-if="post.type === 'carousel'">
-        <div v-for="(image, index) in post.images" :key="index">
-          <img
-            :src="image.url"
-            :width="image.width"
-            :height="image.height"
-          >
-        </div>
-      </a-carousel>
-      <a-card v-else>
-        <img
-          slot="cover"
-          :src="post.image.url"
-          :width="post.image.width"
-          :height="post.image.height"
-        >
+      <a-card>
+        <a-carousel slot="cover" autoplay>
+          <div v-for="(image, index) in post.images" :key="index">
+            <img
+              :src="image.url"
+              :width="image.width"
+              :height="image.height"
+            >
+          </div>
+        </a-carousel>
         <a-card-meta :title="post.caption">
           <div slot="description">
             <a-tag v-for="(tag, index) in post.tags" :key="index">

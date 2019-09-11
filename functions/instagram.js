@@ -8,21 +8,16 @@ exports.handler = (event, context, callback) => {
   })
     .then(({ data, }) => {
       return data.data.map((post) => {
+        let images;
         if (post.type === 'carousel') {
-          return {
-            type: post.type,
-            images: post.carousel_media.map((image) => {
-              return {
-                image: image.images.standard_resolution,
-              };
-            }),
-            caption: post.caption ? post.caption.text : '',
-            tags: post.tags,
-          };
+          images = post.carousel_media.map((image) => {
+            return image.images.standard_resolution;
+          });
+        } else {
+          images = post.images.standard_resolution;
         }
         return {
-          type: post.type,
-          image: post.images.standard_resolution,
+          images,
           caption: post.caption ? post.caption.text : '',
           tags: post.tags,
         };
