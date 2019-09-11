@@ -7,7 +7,26 @@ exports.handler = (event, context, callback) => {
     },
   })
     .then(({ data, }) => {
-      return data;
+      return data.data.map((post) => {
+        if (post.type === 'carousel') {
+          return {
+            type: post.type,
+            images: post.carousel_media.map((image) => {
+              return {
+                image: image.images.standard_resolution,
+              };
+            }),
+            caption: post.caption ? post.caption.text : '',
+            tags: post.tags,
+          };
+        }
+        return {
+          type: post.type,
+          image: post.images.standard_resolution,
+          caption: post.caption ? post.caption.text : '',
+          tags: post.tags,
+        };
+      });
     })
     .then((data) => {
       return JSON.stringify(data);
