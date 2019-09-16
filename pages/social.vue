@@ -2,7 +2,7 @@
   <a-list
     :data-source="posts"
     :loading="loading"
-    :grid="{ gutter: 16, sm: 1, md: 3 }"
+    :grid="{ gutter: 16, sm: 1, md: 2 }"
   >
     <a-list-item slot="renderItem" slot-scope="post">
       <a-card>

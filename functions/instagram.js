@@ -11,10 +11,10 @@ exports.handler = (event, context, callback) => {
         let images;
         if (post.type === 'carousel') {
           images = post.carousel_media.map((image) => {
-            return image.images.standard_resolution;
+            return image.images.low_resolution;
           });
         } else {
-          images = [ post.images.standard_resolution, ];
+          images = [ post.images.low_resolution, ];
         }
         return {
           images,
