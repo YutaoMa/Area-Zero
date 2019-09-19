@@ -55,3 +55,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+img {
+  margin: auto;
+}
+</style>
